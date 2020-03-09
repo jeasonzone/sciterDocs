@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>类和名称空间 | Sciter优化文档</title>
+    <meta name="description" content="基于原sciter文档的优化">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/sciterDocs/logo.ico">
+    
+    <link rel="preload" href="/sciterDocs/assets/css/0.styles.9c608cc4.css" as="style"><link rel="preload" href="/sciterDocs/assets/js/app.44b9e7e1.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/2.e6e0d827.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/117.5dec80f9.js" as="script"><link rel="prefetch" href="/sciterDocs/assets/js/10.de274bb9.js"><link rel="prefetch" href="/sciterDocs/assets/js/100.2f3c6b94.js"><link rel="prefetch" href="/sciterDocs/assets/js/101.41b0ba8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/102.243d107b.js"><link rel="prefetch" href="/sciterDocs/assets/js/103.49baab6b.js"><link rel="prefetch" href="/sciterDocs/assets/js/104.f525157d.js"><link rel="prefetch" href="/sciterDocs/assets/js/105.6e23eef2.js"><link rel="prefetch" href="/sciterDocs/assets/js/106.e7a41717.js"><link rel="prefetch" href="/sciterDocs/assets/js/107.ded304e9.js"><link rel="prefetch" href="/sciterDocs/assets/js/108.da4df5cd.js"><link rel="prefetch" href="/sciterDocs/assets/js/109.8d716f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/11.b176fa87.js"><link rel="prefetch" href="/sciterDocs/assets/js/110.0c66913d.js"><link rel="prefetch" href="/sciterDocs/assets/js/111.85775d2b.js"><link rel="prefetch" href="/sciterDocs/assets/js/112.86ad6c98.js"><link rel="prefetch" href="/sciterDocs/assets/js/113.ef5a7e0b.js"><link rel="prefetch" href="/sciterDocs/assets/js/114.ed201f9e.js"><link rel="prefetch" href="/sciterDocs/assets/js/115.6f22c6d3.js"><link rel="prefetch" href="/sciterDocs/assets/js/116.19777361.js"><link rel="prefetch" href="/sciterDocs/assets/js/118.3d91092b.js"><link rel="prefetch" href="/sciterDocs/assets/js/119.8b28986b.js"><link rel="prefetch" href="/sciterDocs/assets/js/12.503eaeb4.js"><link rel="prefetch" href="/sciterDocs/assets/js/120.5f8497bf.js"><link rel="prefetch" href="/sciterDocs/assets/js/121.081e0591.js"><link rel="prefetch" href="/sciterDocs/assets/js/122.ba05cc94.js"><link rel="prefetch" href="/sciterDocs/assets/js/123.1169a941.js"><link rel="prefetch" href="/sciterDocs/assets/js/124.ab926d4d.js"><link rel="prefetch" href="/sciterDocs/assets/js/125.dc68c79e.js"><link rel="prefetch" href="/sciterDocs/assets/js/126.2f42e738.js"><link rel="prefetch" href="/sciterDocs/assets/js/127.4f42f823.js"><link rel="prefetch" href="/sciterDocs/assets/js/128.1253ada8.js"><link rel="prefetch" href="/sciterDocs/assets/js/129.827a1485.js"><link rel="prefetch" href="/sciterDocs/assets/js/13.22672f29.js"><link rel="prefetch" href="/sciterDocs/assets/js/130.0643ef19.js"><link rel="prefetch" href="/sciterDocs/assets/js/131.928aa3f4.js"><link rel="prefetch" href="/sciterDocs/assets/js/14.f582a4e0.js"><link rel="prefetch" href="/sciterDocs/assets/js/15.e2a2d410.js"><link rel="prefetch" href="/sciterDocs/assets/js/16.e682ff53.js"><link rel="prefetch" href="/sciterDocs/assets/js/17.e3c02dea.js"><link rel="prefetch" href="/sciterDocs/assets/js/18.f08586b1.js"><link rel="prefetch" href="/sciterDocs/assets/js/19.d8d22397.js"><link rel="prefetch" href="/sciterDocs/assets/js/20.3d75a728.js"><link rel="prefetch" href="/sciterDocs/assets/js/21.c6805a64.js"><link rel="prefetch" href="/sciterDocs/assets/js/22.8da894a0.js"><link rel="prefetch" href="/sciterDocs/assets/js/23.9bb38182.js"><link rel="prefetch" href="/sciterDocs/assets/js/24.52dce2a6.js"><link rel="prefetch" href="/sciterDocs/assets/js/25.5648f011.js"><link rel="prefetch" href="/sciterDocs/assets/js/26.89dc463f.js"><link rel="prefetch" href="/sciterDocs/assets/js/27.c09e2a2e.js"><link rel="prefetch" href="/sciterDocs/assets/js/28.8c745e4a.js"><link rel="prefetch" href="/sciterDocs/assets/js/29.ccd0682f.js"><link rel="prefetch" href="/sciterDocs/assets/js/3.44806f7c.js"><link rel="prefetch" href="/sciterDocs/assets/js/30.4aa2fcd2.js"><link rel="prefetch" href="/sciterDocs/assets/js/31.703db421.js"><link rel="prefetch" href="/sciterDocs/assets/js/32.cbc96892.js"><link rel="prefetch" href="/sciterDocs/assets/js/33.ead695a9.js"><link rel="prefetch" href="/sciterDocs/assets/js/34.210bbf82.js"><link rel="prefetch" href="/sciterDocs/assets/js/35.cc6bd4ef.js"><link rel="prefetch" href="/sciterDocs/assets/js/36.af0741d8.js"><link rel="prefetch" href="/sciterDocs/assets/js/37.22c09dfa.js"><link rel="prefetch" href="/sciterDocs/assets/js/38.c79cf3b8.js"><link rel="prefetch" href="/sciterDocs/assets/js/39.030710d7.js"><link rel="prefetch" href="/sciterDocs/assets/js/4.631eb29c.js"><link rel="prefetch" href="/sciterDocs/assets/js/40.fd27cbe7.js"><link rel="prefetch" href="/sciterDocs/assets/js/41.62766825.js"><link rel="prefetch" href="/sciterDocs/assets/js/42.a5c26f07.js"><link rel="prefetch" href="/sciterDocs/assets/js/43.b3ceb583.js"><link rel="prefetch" href="/sciterDocs/assets/js/44.60c48a25.js"><link rel="prefetch" href="/sciterDocs/assets/js/45.98a0fd6a.js"><link rel="prefetch" href="/sciterDocs/assets/js/46.7be35d20.js"><link rel="prefetch" href="/sciterDocs/assets/js/47.d52adf80.js"><link rel="prefetch" href="/sciterDocs/assets/js/48.79222ca2.js"><link rel="prefetch" href="/sciterDocs/assets/js/49.500cadc8.js"><link rel="prefetch" href="/sciterDocs/assets/js/5.c9ecec7a.js"><link rel="prefetch" href="/sciterDocs/assets/js/50.214440b3.js"><link rel="prefetch" href="/sciterDocs/assets/js/51.a8f2fbff.js"><link rel="prefetch" href="/sciterDocs/assets/js/52.da9c9fd9.js"><link rel="prefetch" href="/sciterDocs/assets/js/53.7c02a5ad.js"><link rel="prefetch" href="/sciterDocs/assets/js/54.a35f6407.js"><link rel="prefetch" href="/sciterDocs/assets/js/55.cb3dd4ca.js"><link rel="prefetch" href="/sciterDocs/assets/js/56.d426b1a4.js"><link rel="prefetch" href="/sciterDocs/assets/js/57.a374b7b0.js"><link rel="prefetch" href="/sciterDocs/assets/js/58.e306c12c.js"><link rel="prefetch" href="/sciterDocs/assets/js/59.582b60c1.js"><link rel="prefetch" href="/sciterDocs/assets/js/6.7c7ef19b.js"><link rel="prefetch" href="/sciterDocs/assets/js/60.2896c82c.js"><link rel="prefetch" href="/sciterDocs/assets/js/61.d7df0142.js"><link rel="prefetch" href="/sciterDocs/assets/js/62.48604ffc.js"><link rel="prefetch" href="/sciterDocs/assets/js/63.a75a2f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/64.0baf1184.js"><link rel="prefetch" href="/sciterDocs/assets/js/65.62da2a15.js"><link rel="prefetch" href="/sciterDocs/assets/js/66.a8b889dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/67.3b37540d.js"><link rel="prefetch" href="/sciterDocs/assets/js/68.91634493.js"><link rel="prefetch" href="/sciterDocs/assets/js/69.1ee19c1a.js"><link rel="prefetch" href="/sciterDocs/assets/js/7.fcddb250.js"><link rel="prefetch" href="/sciterDocs/assets/js/70.a003ab9f.js"><link rel="prefetch" href="/sciterDocs/assets/js/71.9ba10509.js"><link rel="prefetch" href="/sciterDocs/assets/js/72.0de81999.js"><link rel="prefetch" href="/sciterDocs/assets/js/73.3e751fb5.js"><link rel="prefetch" href="/sciterDocs/assets/js/74.932aa838.js"><link rel="prefetch" href="/sciterDocs/assets/js/75.ae054aa6.js"><link rel="prefetch" href="/sciterDocs/assets/js/76.018d3720.js"><link rel="prefetch" href="/sciterDocs/assets/js/77.6c99c1bb.js"><link rel="prefetch" href="/sciterDocs/assets/js/78.c495647c.js"><link rel="prefetch" href="/sciterDocs/assets/js/79.a10c82f1.js"><link rel="prefetch" href="/sciterDocs/assets/js/8.c5a1f576.js"><link rel="prefetch" href="/sciterDocs/assets/js/80.a47845c4.js"><link rel="prefetch" href="/sciterDocs/assets/js/81.26a22511.js"><link rel="prefetch" href="/sciterDocs/assets/js/82.c7dd5277.js"><link rel="prefetch" href="/sciterDocs/assets/js/83.066c2476.js"><link rel="prefetch" href="/sciterDocs/assets/js/84.825a2068.js"><link rel="prefetch" href="/sciterDocs/assets/js/85.089dc4a1.js"><link rel="prefetch" href="/sciterDocs/assets/js/86.b15448a5.js"><link rel="prefetch" href="/sciterDocs/assets/js/87.67c6395f.js"><link rel="prefetch" href="/sciterDocs/assets/js/88.d9132d8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/89.70cacf9b.js"><link rel="prefetch" href="/sciterDocs/assets/js/9.7c0713dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/90.4b4def09.js"><link rel="prefetch" href="/sciterDocs/assets/js/91.bc6db15e.js"><link rel="prefetch" href="/sciterDocs/assets/js/92.57897042.js"><link rel="prefetch" href="/sciterDocs/assets/js/93.3144c87a.js"><link rel="prefetch" href="/sciterDocs/assets/js/94.e0471db7.js"><link rel="prefetch" href="/sciterDocs/assets/js/95.dcb7dac6.js"><link rel="prefetch" href="/sciterDocs/assets/js/96.9cf440f6.js"><link rel="prefetch" href="/sciterDocs/assets/js/97.946663d4.js"><link rel="prefetch" href="/sciterDocs/assets/js/98.e3573176.js"><link rel="prefetch" href="/sciterDocs/assets/js/99.ec657a18.js">
+    <link rel="stylesheet" href="/sciterDocs/assets/css/0.styles.9c608cc4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/sciterDocs/" class="home-link router-link-active"><!----> <span class="site-name">Sciter优化文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/sciterDocs/tiscript/tiscript_article.html" class="sidebar-link">概述</a></li><li><a href="/sciterDocs/tiscript/Syntax.html" class="sidebar-link">语法</a></li><li><a href="/sciterDocs/tiscript/Types.html" class="sidebar-link">类型</a></li><li><a href="/sciterDocs/tiscript/Expressions.html" class="sidebar-link">表达式</a></li><li><a href="/sciterDocs/tiscript/Statements.html" class="sidebar-link">语句</a></li><li><a href="/sciterDocs/tiscript/Functions.html" class="sidebar-link">函数</a></li><li><a href="/sciterDocs/tiscript/Classes.html" class="active sidebar-link">类和名称空间</a></li><li><a href="/sciterDocs/tiscript/Decorators.html" class="sidebar-link">装饰器(函数、类和名称空间的装饰器)</a></li><li><a href="/sciterDocs/tiscript/promise.html" class="sidebar-link">await和promise</a></li><li><a href="/sciterDocs/tiscript/Task.html" class="sidebar-link">Task</a></li><li><a href="/sciterDocs/tiscript/Generators_and_yield.html" class="sidebar-link">Generator与yield</a></li><li><a href="/sciterDocs/tiscript/Object_match_feature.html" class="sidebar-link">对象匹配特性</a></li><li><a href="/sciterDocs/tiscript/sciter_script_hidden_treasures.html" class="sidebar-link">脚本隐藏特性</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="类和名称空间"><a href="#类和名称空间" class="header-anchor">#</a> 类和名称空间</h1> <p><strong>namespace</strong>用于声明一个新的名称空间。一个名称空间是一个函数、类、变量等聚合到一个单元的集合。名称空间也可以包含其他(内部)名称空间. 在内部，一个名称空间实际上是一个命名全局对象。 super关键字可以用于方法父名称空间的成员——在内部名称空间有相同名称的。</p> <p>名称空间的声明:</p> <pre class="code tiscript"><code><code>namespace</code> &lt;名称&gt;
+<code>{</code>  [ &lt;function&gt; | &lt;var&gt; | &lt;const&gt; | &lt;class&gt; | &lt;namespace&gt; ]*
+<code>}
+</code></code></pre> <h1><a name="classes" id="classes">类</a></h1> <p><strong>class</strong>用于定义一个新的类(对象的类型):</p> <pre class="code tiscript"><code>class &lt;类名&gt; [ : &lt;父类名&gt; ]
+{
+  [ &lt;function&gt; | &lt;constructor&gt; | &lt;property&gt; | &lt;var&gt; | &lt;const&gt; | &lt;this var&gt; | &lt;class&gt; ]*
+}
+</code></pre> <dl><dt>其中:</dt> <dd><code>&lt;function&gt;</code> 函数，是一个标准的函数声明。这样的函数可以被类的示例或静态方法使用。<br> <code>&lt;constructor&gt;</code> 构造函数，是一个名称为this的函数。<br> <code>&lt;property&gt;</code> 属性，是一个特定类型的成员函数。参见下面的内容。<br> <code>&lt;var&gt;</code> 变量，是一个标准的var声明——允许定义类或模块变量(又名静态变量)。<br> <code>&lt;const&gt;</code> 常量，是一个命名常量的声明。<br> <code>&lt;class&gt;</code> 类，是一个内部类的声明。<br> <code>&lt;this var&gt;</code> 成员变量, 是一个成员变量的声明:<br>      <code>this var &lt;name&gt; [= &lt;value&gt;] [, &lt;name&gt; = &lt;value&gt; , ...];</code></dd></dl> <h2><a name="constructors" id="constructors">构造函数</a></h2> <p>该函数的名称为this, 在类的上下文中声明，作为该类的所有实例的函数-构造器:</p> <pre class="code tiscript"><code>class Tor
+{
+  <code>this var</code> one = 1; // 声明一个成员变量
+  <code>function</code> <code>this</code>() { <code>this</code>.two = 2; } // 构造器
+}
+</code></pre> <p>构造函数的主要目标是用来初始化一个类(又名对象)的新实例。它通过创建和初始化实例将包含的所有字段。在构造函数中可以使用名称为this的变量来方法被创建的对象1)。编译器在处理完成new操作符后调用构造函数:</p> <p>�������ڴ������new����������ù��캯��:</p> <pre class="code tiscript"><code>var tor = new Tor();
+//  tor.one == 1 并且
+//  tor.two == 2 
+</code></pre> <p>在其他情况下, <code>function this()</code>是一个普通函数，它也可以定义一些参数, 包括<a href="/wiki/tiscript/functions#optional_parameters" title="tiscript:functions" class="wikilink1">可选参数</a>。</p> <h2><a name="methods" id="methods">方法</a></h2> <p>在类的上下文中声明的，其他名称的函数，是该类的一个方法。如果一个方法有一个this变量的引用，则它被称作<em><strong>实例方法</strong></em>(又名 动态方法)。如果它没有this变量的引用，则它是一个<em><strong>类方法</strong></em>(又名 静态方法)。原则上，一个函数，既可以作为实例方法，也可以作为类方法。当作为类方法调用时，this将会指向定义该方法所在的类或名称空间。当作为实例方法调用时(如obj.method())，this将会指向对象实例(这种情况下指向obj)。</p> <h3><a name="instance-methods" id="instance-methods">实例方法</a></h3> <p>实例方法必须在该类的特定对象上下文中调用:</p> <pre class="code tiscript"><code>class Tor
+{
+  function rotate( angle ) {  this.angle = angle; this.update(); }
+}
+var tor = new Tor();
+tor.rotate(270);     // Tor.rotate()方法在一个特定实例-'tor'的上下文上调用
+</code></pre> <h3><a name="static-methods" id="static-methods">静态方法</a></h3> <p>类/名称空间的静态方法可以使用ClassOrNamespace.Method语句(又名&quot;点语句&quot;):</p> <pre class="code tiscript"><code>class Tor
+{
+  var all = [];
+  function rotateAll( angle ) {  for(var t in Tor.all) t.rotate(angle);  }
+}
+Tor.rotateAll(270); // Tor.rotateAll()方法被当做类方法调用
+</code></pre> <h2><a name="properties" id="properties">属性</a></h2> <p>TIScript支持可计算(又名 虚拟)属性的定义。它是特殊函数——用于设置或获取一个属性的值。可计算属性的定义语法如下:</p> <pre class="code tiscript"><code>property</code> &lt;函数名&gt; <code>(</code> &lt;参数&gt; <code>)
+</code>{
+  [ &lt;语句&gt; | get &lt;语句&gt; | set &lt;语句&gt; ]*
+}
+</pre> <p>property的语句体内可以包含语句，语句可以出现在正常的函数体内，也可以出现在get和set节内。get节(一个或多个)在函数用于获取属性值时执行，而set节函数用于设置属性值时执行。示例:</p> <pre class="code tiscript"><code>class Baz
+{
+  function this() { this._first = 1; this._second = 2; }
+  property first( val )
+  {
+    get return this._first; // single expression get block
+    set this._first = val;  // single expression set block
+  }
+  property second( val )
+  {
+    stdout &lt;&lt; &quot;second&quot;;
+    get
+    {
+      stdout &lt;&lt; &quot;get\n&quot;;
+      return this._second + 2;
+    }
+    set
+    {
+      stdout &lt;&lt; &quot;set\n&quot;;
+      this._second = val - 2;
+    }
+  }
+}
+</code></pre> <div>注意：属性函数的声明必须包含一个参数，如val。</div> <h3>未定义的属性处理器</h3> <p>你可以定义一个所谓的未定义的属性处理器(Undefined Property Handler), 它用于处理未定义属性。 定义UPH的语法类似于可计算属性处理器，只是它的名称是undefined:</p> <pre class="code tiscript"><code>property</code> <code>undefined</code> ( &lt;name&gt;, &lt;value&gt; )
+<code>{
+</code>  [&lt;语句&gt; | <code>get</code> &lt;语句&gt; | <code>set</code> &lt;语句&gt; ]*
+<code>}</code>
+</pre> <p>UPH函数必须有两个参数: 属性的名称&lt;name&gt;和属性的值ֵ&lt;value&gt;(用在属性的set操作)UPH可用在设置属性时属性名未知的情况下,例如，你可能希望将访问数据集的字段作为属性:</p> <pre class="code tiscript"><code>property Recordset.undefined(name, val)
+{
+  get return this.getFieldValue(name);
+}
+...
+var rs = DB.exec(&quot;SELECT firstName, secondName FROM employee&quot;);
+var n1 = rs.firstName;  // ͨ通过undefined()属性直接调用rs.getFieldValue(#firstName); 
+var n2 = rs.secondName; 
+</code></pre> <h2><a name="type-variables" id="type-variables">类/名称空间  变量</a></h2> <p>类，或名称空间、变量使用var关键字定义在类或名称空间的上下文。示例:</p> <pre class="code tiscript"><code>namespace Toz
+{
+  var all = []; //创建一个空数组变量;
+  var singleton = { something: 123; }; // 创建一个对象变量;
+  var counter = 0; // 创建一个包含整数0的变量;
+}
+</code></pre> <p>为了访问这些变量，请使用它的全名:</p> <pre class="code tiscript"><code>Toz.all.push(&quot;anything&quot;);
+Toz.counter += 1;
+</code></pre> <h2>实例变量</h2> <p>类可能预先定义了所谓的实例变量。实例变量对于类的每个实例都是唯一的-不与其他实例共享</p> <p>实例变量是通过使用this var关键字组合在类上下文中定义的。示例:</p> <pre><code>class Recordset {
+  this var currentRecord = []; // note, these are
+  this var dbCursor = null;    // instance variables
+  function next() { this.currentRecord = DB.advanceNext(this.dbCursor); }
+}</code></pre> <h2><a name="constants" id="constants">常量</a></h2> <p>名称空间常量(又名 常量) 是只读变量，它使用const关键字定义。示例:</p> <pre class="code tiscript"><code>namespace Toz
+{
+  const ALIGN_LEFT = 1;
+  const ALIGN_CENTER = 2;
+  const ALIGN_RIGHT = 3;
+}
+</code></pre> <p>为了访问这些常量，请使用它的全名:</p> <pre class="code tiscript"><code>switch(alignment)
+{
+  case Toz.ALIGN_LEFT: ... break;
+  case Toz.ALIGN_CENTER: ... break;
+  case Toz.ALIGN_RIGHT: ... break;
+  default: ... break;
+}
+</code></pre> <p><sup><a href="#fnt__1" id="fn__1" name="fn__1">1)</a></sup> 使用this作为构造函数的名称 的想法来自<a href="http://digitalmars.com/d/class.html#constructors" title="http://digitalmars.com/d/class.html#constructors" rel="nofollow" class="urlextern">D语言</a></p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sciterDocs/tiscript/Functions.html" class="prev">
+        函数
+      </a></span> <span class="next"><a href="/sciterDocs/tiscript/Decorators.html">
+        装饰器(函数、类和名称空间的装饰器)
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/sciterDocs/assets/js/app.44b9e7e1.js" defer></script><script src="/sciterDocs/assets/js/2.e6e0d827.js" defer></script><script src="/sciterDocs/assets/js/117.5dec80f9.js" defer></script>
+  </body>
+</html>

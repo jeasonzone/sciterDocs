@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>选择器类 | Sciter优化文档</title>
+    <meta name="description" content="基于原sciter文档的优化">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/sciterDocs/logo.ico">
+    
+    <link rel="preload" href="/sciterDocs/assets/css/0.styles.9c608cc4.css" as="style"><link rel="preload" href="/sciterDocs/assets/js/app.44b9e7e1.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/2.e6e0d827.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/4.631eb29c.js" as="script"><link rel="prefetch" href="/sciterDocs/assets/js/10.de274bb9.js"><link rel="prefetch" href="/sciterDocs/assets/js/100.2f3c6b94.js"><link rel="prefetch" href="/sciterDocs/assets/js/101.41b0ba8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/102.243d107b.js"><link rel="prefetch" href="/sciterDocs/assets/js/103.49baab6b.js"><link rel="prefetch" href="/sciterDocs/assets/js/104.f525157d.js"><link rel="prefetch" href="/sciterDocs/assets/js/105.6e23eef2.js"><link rel="prefetch" href="/sciterDocs/assets/js/106.e7a41717.js"><link rel="prefetch" href="/sciterDocs/assets/js/107.ded304e9.js"><link rel="prefetch" href="/sciterDocs/assets/js/108.da4df5cd.js"><link rel="prefetch" href="/sciterDocs/assets/js/109.8d716f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/11.b176fa87.js"><link rel="prefetch" href="/sciterDocs/assets/js/110.0c66913d.js"><link rel="prefetch" href="/sciterDocs/assets/js/111.85775d2b.js"><link rel="prefetch" href="/sciterDocs/assets/js/112.86ad6c98.js"><link rel="prefetch" href="/sciterDocs/assets/js/113.ef5a7e0b.js"><link rel="prefetch" href="/sciterDocs/assets/js/114.ed201f9e.js"><link rel="prefetch" href="/sciterDocs/assets/js/115.6f22c6d3.js"><link rel="prefetch" href="/sciterDocs/assets/js/116.19777361.js"><link rel="prefetch" href="/sciterDocs/assets/js/117.5dec80f9.js"><link rel="prefetch" href="/sciterDocs/assets/js/118.3d91092b.js"><link rel="prefetch" href="/sciterDocs/assets/js/119.8b28986b.js"><link rel="prefetch" href="/sciterDocs/assets/js/12.503eaeb4.js"><link rel="prefetch" href="/sciterDocs/assets/js/120.5f8497bf.js"><link rel="prefetch" href="/sciterDocs/assets/js/121.081e0591.js"><link rel="prefetch" href="/sciterDocs/assets/js/122.ba05cc94.js"><link rel="prefetch" href="/sciterDocs/assets/js/123.1169a941.js"><link rel="prefetch" href="/sciterDocs/assets/js/124.ab926d4d.js"><link rel="prefetch" href="/sciterDocs/assets/js/125.dc68c79e.js"><link rel="prefetch" href="/sciterDocs/assets/js/126.2f42e738.js"><link rel="prefetch" href="/sciterDocs/assets/js/127.4f42f823.js"><link rel="prefetch" href="/sciterDocs/assets/js/128.1253ada8.js"><link rel="prefetch" href="/sciterDocs/assets/js/129.827a1485.js"><link rel="prefetch" href="/sciterDocs/assets/js/13.22672f29.js"><link rel="prefetch" href="/sciterDocs/assets/js/130.0643ef19.js"><link rel="prefetch" href="/sciterDocs/assets/js/131.928aa3f4.js"><link rel="prefetch" href="/sciterDocs/assets/js/14.f582a4e0.js"><link rel="prefetch" href="/sciterDocs/assets/js/15.e2a2d410.js"><link rel="prefetch" href="/sciterDocs/assets/js/16.e682ff53.js"><link rel="prefetch" href="/sciterDocs/assets/js/17.e3c02dea.js"><link rel="prefetch" href="/sciterDocs/assets/js/18.f08586b1.js"><link rel="prefetch" href="/sciterDocs/assets/js/19.d8d22397.js"><link rel="prefetch" href="/sciterDocs/assets/js/20.3d75a728.js"><link rel="prefetch" href="/sciterDocs/assets/js/21.c6805a64.js"><link rel="prefetch" href="/sciterDocs/assets/js/22.8da894a0.js"><link rel="prefetch" href="/sciterDocs/assets/js/23.9bb38182.js"><link rel="prefetch" href="/sciterDocs/assets/js/24.52dce2a6.js"><link rel="prefetch" href="/sciterDocs/assets/js/25.5648f011.js"><link rel="prefetch" href="/sciterDocs/assets/js/26.89dc463f.js"><link rel="prefetch" href="/sciterDocs/assets/js/27.c09e2a2e.js"><link rel="prefetch" href="/sciterDocs/assets/js/28.8c745e4a.js"><link rel="prefetch" href="/sciterDocs/assets/js/29.ccd0682f.js"><link rel="prefetch" href="/sciterDocs/assets/js/3.44806f7c.js"><link rel="prefetch" href="/sciterDocs/assets/js/30.4aa2fcd2.js"><link rel="prefetch" href="/sciterDocs/assets/js/31.703db421.js"><link rel="prefetch" href="/sciterDocs/assets/js/32.cbc96892.js"><link rel="prefetch" href="/sciterDocs/assets/js/33.ead695a9.js"><link rel="prefetch" href="/sciterDocs/assets/js/34.210bbf82.js"><link rel="prefetch" href="/sciterDocs/assets/js/35.cc6bd4ef.js"><link rel="prefetch" href="/sciterDocs/assets/js/36.af0741d8.js"><link rel="prefetch" href="/sciterDocs/assets/js/37.22c09dfa.js"><link rel="prefetch" href="/sciterDocs/assets/js/38.c79cf3b8.js"><link rel="prefetch" href="/sciterDocs/assets/js/39.030710d7.js"><link rel="prefetch" href="/sciterDocs/assets/js/40.fd27cbe7.js"><link rel="prefetch" href="/sciterDocs/assets/js/41.62766825.js"><link rel="prefetch" href="/sciterDocs/assets/js/42.a5c26f07.js"><link rel="prefetch" href="/sciterDocs/assets/js/43.b3ceb583.js"><link rel="prefetch" href="/sciterDocs/assets/js/44.60c48a25.js"><link rel="prefetch" href="/sciterDocs/assets/js/45.98a0fd6a.js"><link rel="prefetch" href="/sciterDocs/assets/js/46.7be35d20.js"><link rel="prefetch" href="/sciterDocs/assets/js/47.d52adf80.js"><link rel="prefetch" href="/sciterDocs/assets/js/48.79222ca2.js"><link rel="prefetch" href="/sciterDocs/assets/js/49.500cadc8.js"><link rel="prefetch" href="/sciterDocs/assets/js/5.c9ecec7a.js"><link rel="prefetch" href="/sciterDocs/assets/js/50.214440b3.js"><link rel="prefetch" href="/sciterDocs/assets/js/51.a8f2fbff.js"><link rel="prefetch" href="/sciterDocs/assets/js/52.da9c9fd9.js"><link rel="prefetch" href="/sciterDocs/assets/js/53.7c02a5ad.js"><link rel="prefetch" href="/sciterDocs/assets/js/54.a35f6407.js"><link rel="prefetch" href="/sciterDocs/assets/js/55.cb3dd4ca.js"><link rel="prefetch" href="/sciterDocs/assets/js/56.d426b1a4.js"><link rel="prefetch" href="/sciterDocs/assets/js/57.a374b7b0.js"><link rel="prefetch" href="/sciterDocs/assets/js/58.e306c12c.js"><link rel="prefetch" href="/sciterDocs/assets/js/59.582b60c1.js"><link rel="prefetch" href="/sciterDocs/assets/js/6.7c7ef19b.js"><link rel="prefetch" href="/sciterDocs/assets/js/60.2896c82c.js"><link rel="prefetch" href="/sciterDocs/assets/js/61.d7df0142.js"><link rel="prefetch" href="/sciterDocs/assets/js/62.48604ffc.js"><link rel="prefetch" href="/sciterDocs/assets/js/63.a75a2f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/64.0baf1184.js"><link rel="prefetch" href="/sciterDocs/assets/js/65.62da2a15.js"><link rel="prefetch" href="/sciterDocs/assets/js/66.a8b889dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/67.3b37540d.js"><link rel="prefetch" href="/sciterDocs/assets/js/68.91634493.js"><link rel="prefetch" href="/sciterDocs/assets/js/69.1ee19c1a.js"><link rel="prefetch" href="/sciterDocs/assets/js/7.fcddb250.js"><link rel="prefetch" href="/sciterDocs/assets/js/70.a003ab9f.js"><link rel="prefetch" href="/sciterDocs/assets/js/71.9ba10509.js"><link rel="prefetch" href="/sciterDocs/assets/js/72.0de81999.js"><link rel="prefetch" href="/sciterDocs/assets/js/73.3e751fb5.js"><link rel="prefetch" href="/sciterDocs/assets/js/74.932aa838.js"><link rel="prefetch" href="/sciterDocs/assets/js/75.ae054aa6.js"><link rel="prefetch" href="/sciterDocs/assets/js/76.018d3720.js"><link rel="prefetch" href="/sciterDocs/assets/js/77.6c99c1bb.js"><link rel="prefetch" href="/sciterDocs/assets/js/78.c495647c.js"><link rel="prefetch" href="/sciterDocs/assets/js/79.a10c82f1.js"><link rel="prefetch" href="/sciterDocs/assets/js/8.c5a1f576.js"><link rel="prefetch" href="/sciterDocs/assets/js/80.a47845c4.js"><link rel="prefetch" href="/sciterDocs/assets/js/81.26a22511.js"><link rel="prefetch" href="/sciterDocs/assets/js/82.c7dd5277.js"><link rel="prefetch" href="/sciterDocs/assets/js/83.066c2476.js"><link rel="prefetch" href="/sciterDocs/assets/js/84.825a2068.js"><link rel="prefetch" href="/sciterDocs/assets/js/85.089dc4a1.js"><link rel="prefetch" href="/sciterDocs/assets/js/86.b15448a5.js"><link rel="prefetch" href="/sciterDocs/assets/js/87.67c6395f.js"><link rel="prefetch" href="/sciterDocs/assets/js/88.d9132d8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/89.70cacf9b.js"><link rel="prefetch" href="/sciterDocs/assets/js/9.7c0713dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/90.4b4def09.js"><link rel="prefetch" href="/sciterDocs/assets/js/91.bc6db15e.js"><link rel="prefetch" href="/sciterDocs/assets/js/92.57897042.js"><link rel="prefetch" href="/sciterDocs/assets/js/93.3144c87a.js"><link rel="prefetch" href="/sciterDocs/assets/js/94.e0471db7.js"><link rel="prefetch" href="/sciterDocs/assets/js/95.dcb7dac6.js"><link rel="prefetch" href="/sciterDocs/assets/js/96.9cf440f6.js"><link rel="prefetch" href="/sciterDocs/assets/js/97.946663d4.js"><link rel="prefetch" href="/sciterDocs/assets/js/98.e3573176.js"><link rel="prefetch" href="/sciterDocs/assets/js/99.ec657a18.js">
+    <link rel="stylesheet" href="/sciterDocs/assets/css/0.styles.9c608cc4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/sciterDocs/" class="home-link router-link-active"><!----> <span class="site-name">Sciter优化文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/sciterDocs/js/buttonClass.html" class="sidebar-link">按钮类</a></li><li><a href="/sciterDocs/js/editorClass.html" class="sidebar-link">编辑器类</a></li><li><a href="/sciterDocs/js/selectorClass.html" class="active sidebar-link">选择器类</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#单选列表-select" class="sidebar-link">单选列表(select)</a></li><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#多选列表-select-multiple" class="sidebar-link">多选列表(select-multiple)</a></li><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#复选框列表-select-checkmarks" class="sidebar-link">复选框列表(select-checkmarks)</a></li><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#树视图-tree-view" class="sidebar-link">树视图(tree-view)</a></li><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#复选框树-tree-checkmarks" class="sidebar-link">复选框树(tree-checkmarks)</a></li><li class="sidebar-sub-header"><a href="/sciterDocs/js/selectorClass.html#下拉选择列表-dropdown-select" class="sidebar-link">下拉选择列表(dropdown-select)</a></li></ul></li><li><a href="/sciterDocs/js/dateInput.html" class="sidebar-link">日期/时间输入</a></li><li><a href="/sciterDocs/js/container.html" class="sidebar-link">容器</a></li><li><a href="/sciterDocs/js/output.html" class="sidebar-link">输出</a></li><li><a href="/sciterDocs/js/menu.html" class="sidebar-link">菜单</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="选择器类"><a href="#选择器类" class="header-anchor">#</a> 选择器类</h1> <h2 id="单选列表-select"><a href="#单选列表-select" class="header-anchor">#</a> 单选列表(select)</h2> <h1>behavior:select</h1> <p>标准选择列表&lt;select&gt;行为。原则上它可以被应用到任何元素上。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select size=&quot;2...N&quot;&gt;&lt;/select&gt;</code></li> <li><code>&lt;select|list&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p><code>&lt;select&gt;</code>可能包含<code>&lt;option&gt;</code>元素。<code>&lt;option&gt;</code>元素可以包含在任何html标签内。</p> <p>该行为将&lt;option&gt;或任何包含<code>role=&quot;option&quot;</code>属性的元素当做一个可选择实体。</p> <p>被选中的option将会设置<code>:current</code>状态标志。</p> <p>示例, 一个简单的选择列表:</p> <pre><code>&lt;select&gt;
+  &lt;option value=&quot;#ff0000&quot; selected&gt;Red&lt;/option&gt;
+  &lt;option value=&quot;#00ff00&quot;&gt;Green&lt;/option&gt;
+  &lt;option value=&quot;#0000ff&quot;&gt;Blue&lt;/option&gt;
+&lt;/select&gt;
+</code></pre> <p>将&lt;table&gt;元素当做一个选择列表:</p> <pre><code>&lt;style&gt;
+  table.select { behavior:select; }
+  table.select &gt; tr:current { color:white; background:blue; }
+&lt;/style&gt;
+&lt;table.select&gt;
+  &lt;tr role=option value=&quot;#ff0000&quot;&gt;&lt;td&gt;Red&lt;/td&gt;&lt;td&gt;#FF0000&lt;td&gt;&lt;/tr&gt;
+  &lt;tr role=option value=&quot;#00ff00&quot;&gt;&lt;td&gt;Green&lt;/td&gt;&lt;td&gt;#00FF00&lt;td&gt;&lt;/tr&gt;
+  &lt;tr role=option value=&quot;#0000ff&quot;&gt;&lt;td&gt;Blue&lt;/td&gt;&lt;td&gt;#0000FF&lt;td&gt;&lt;/tr&gt;
+&lt;/table&gt;
+</code></pre> <h2>属性</h2> <p>该行为需要知道的属性:</p> <ul><li><code>size=integer</code> - 列表中可见元素的数量。注意：select元素的高度可以被CSS覆盖掉。</li> <li><code>name=&quot;name&quot;</code> - 标准的<em>name</em>属性 - from表单上一个input元素的名称。</li> <li><code>novalue=&quot;text&quot;</code> - 如果select中没有使用<code>&lt;option selected&gt;</code>初始化它，则将会使用该显示该文本。</li> <li><code>options</code> - 一个<code>&lt;option&gt;</code>列表的引用, 在这种场景中，this是元素本身。</li> <li><code>as=&quot;type&quot;</code> - 定义<code>&lt;option value=&quot;...&quot;&gt;</code>的解析规则，接收:
+      <ul><li><code>as=&quot;auto&quot;</code>, 默认值, 尝试翻译option的 value值为integer、float、boolean或length值。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;integer&quot;</code>, 尝试翻译option的value值为integer。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;float&quot;</code>, 尝试翻译option的value值为float。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;numeric&quot;</code>, 尝试翻译option的value值为integer或float。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;string&quot;</code>, 不解析option的value。将value作为字符串返回。</li></ul></li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li><code>SELECT_SELECTION_CHANGED</code> event, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li><code>SELECT_SELECTION_CHANGING</code> event, 当选择项将要改变时生成该事件。该事件为同步事件。</li></ul> <h2>方法</h2> <p>N/A - 该行为没有引入任何特有的方法。</p> <h2>命令</h2> <p>注意: 命令时通过调用<code>element.execCommand(&quot;cmd-name&quot;[,params])</code>方法执行的。</p> <ul><li><b>&quot;set-current&quot;</b> - 当该命令发送给一个select内部的<code>&lt;option&gt;</code>元素时，该option将被设置为当前元素;</li></ul> <h2>value</h2> <p>any, 读/写属性。选择项(option)的值(value)。option的值是它的value属性或它的文本内容(如果未定义value属性时)。</p> <h2>在脚本中选择项修改的处理</h2> <h3><code>onValueChanged</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onValueChanged = function() { var v = this.value; ... }
+</code></pre> <h3><code>on()</code> 订阅</h3> <pre><code>var btn = $(select#some);
+btn.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+self.on(&quot;change&quot;, &quot;select#some&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis 装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@change @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre> <h2 id="多选列表-select-multiple"><a href="#多选列表-select-multiple" class="header-anchor">#</a> 多选列表(select-multiple)</h2> <h1>behavior:select-multiple</h1> <p>多选列表(&lt;select multiple&gt;)的行为(当按照ctrl键时可以进行多选)。原则上它可以被应用到任何元素上。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select size=&quot;2...N&quot; multiple&gt;&lt;/select&gt;</code></li> <li><code>&lt;select|list multiple&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p>于behavior:select行为相同。</p> <p>被选择项被设置了<code>:checked</code>状态标志，因此可以在CSS中使用:checked伪类来设置选择状态项的样式:</p> <pre><code>select &gt; option:checked { background-image: url(my-checkmark.png); }
+</code></pre> <h2>属性</h2> <p>该行为需要知道的属性:</p> <ul><li><code>size=integer</code> - 列表中可见元素的数量。注意：select元素的高度可以被CSS覆盖掉。</li> <li><code>name=&quot;name&quot;</code> - 标准的<em>name</em>属性 - from表单上一个input元素的名称。</li> <li><code>novalue=&quot;text&quot;</code> -如果select中没有使用<code>&lt;option selected&gt;</code>初始化它，则将会使用该显示该文本。</li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li>SELECT_SELECTION_CHANGED event, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li>SELECT_SELECTION_CHANGING event, 当选择项将要改变时生成该事件。该事件为同步事件。</li></ul> <h2>方法</h2> <p>N/A - 该行为没有引入任何特有的方法。</p> <h2>value</h2> <p>value数组, 读/写属性, 选择项的列表。 </p> <h2>在脚本中处理选择项的修改</h2> <h3><code>onValueChanged</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onValueChanged = function() { var v = this.value; ... }
+</code></pre> <h3><code>on()</code> 订阅</h3> <pre><code>var btn = $(select#some);
+btn.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+self.on(&quot;change&quot;, &quot;select#some&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis 装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@change @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre> <h2 id="复选框列表-select-checkmarks"><a href="#复选框列表-select-checkmarks" class="header-anchor">#</a> 复选框列表(select-checkmarks)</h2> <h1>behavior:select-checkmarks</h1> <p>有复选状态的&lt;select multiple&gt;列表。原则上它可以被应用到任何元素上。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select size=&quot;2...N&quot; multiple=&quot;checkmarks&quot;&gt;&lt;/select&gt;</code></li> <li><code>&lt;select|list multiple=&quot;checkmarks&quot;&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p>与behavior:select行为相同。</p> <p>被选择项被设置了<code>:checked</code>状态标志，因此可以在CSS中使用:checked伪类来设置选择状态项的样式:</p> <pre><code>select &gt; option:checked { background-image: url(my-checkmark.png); }
+</code></pre> <p>当用户在选择option元素的标记(foreground-image)上点击时behavior:select-checkmarks行为切换option的:checked状态。</p> <h2>属性</h2> <p>该行为需要知道的属性:</p> <ul><li><code>size=integer</code> - 列表中可见元素的数量。注意：select元素的高度可以被CSS覆盖掉。</li> <li><code>name=&quot;name&quot;</code> - 标准的<em>name</em>属性 - from表单上一个input元素的名称。</li> <li><code>novalue=&quot;text&quot;</code> - 如果select中没有使用<code>&lt;option selected&gt;</code>初始化它，则将会使用该显示该文本。</li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li>SELECT_SELECTION_CHANGED event, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li>SELECT_SELECTION_CHANGING event, 当选择项将要改变时生成该事件。该事件为同步事件。</li></ul> <h2>方法</h2> <p>N/A - 该行为没有引入任何特有的方法。</p> <h2>value</h2> <p>value数组, 读/写属性, 选择项的列表。 </p> <h2>在脚本中处理选择项的修改</h2> <h3><code>onValueChanged</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onValueChanged = function() { var v = this.value; ... }
+</code></pre> <h3><code>on()</code>订阅</h3> <pre><code>var btn = $(select#some);
+btn.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+self.on(&quot;change&quot;, &quot;select#some&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@change @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre> <h2 id="树视图-tree-view"><a href="#树视图-tree-view" class="header-anchor">#</a> 树视图(tree-view)</h2> <h1>behavior:tree-view</h1> <p>树状结构的&lt;select&gt;列表行为。该行为可以被应用到任何块级容器元素上。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select|tree&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p>该行为识别两种类型的&lt;option&gt;:</p> <ul><li>&quot;叶(Leaf)&quot; &lt;option&gt; 指不包含子&lt;option&gt;的元素。</li> <li>&quot;节点(Node)&quot; &lt;option&gt; 指包含子&lt;option&gt;的元素。</li></ul> <pre><code>&lt;option&gt;
+    &lt;caption&gt;Node标题&lt;/caption&gt;
+    &lt;option&gt;Leaf 1&lt;/option&gt;
+    &lt;option&gt;Leaf 2&lt;/option&gt;
+&lt;/option&gt;
+</code></pre> <p>被选择项会被设置<code>:current</code>状态标志。</p> <p>节点&lt;option&gt;在运行期会被设置<code>:node</code>标志(在CSS中可以使用:node伪类)。因此下面的CSS选择器:</p> <ul><li><code>option:node</code> - 匹配所有节点option;</li> <li><code>option:not(:node)</code> - 匹配所有的叶option.</li></ul> <p><code>option:node</code>在响应UI事件(鼠标和键盘事件)时可能包含<code>:expanded</code>或<code>:collapsed</code>运行时状态标志。</p> <p>该行为支持&quot;虚拟树&quot;模式。初始时，该树的所有节点option可能都是折叠的，并且是空的。这些节点option只有当接收到ELEMENT_EXPANDED事件时才填充。并且在ELEMENT_COLLAPSED事件中清除以便用最小的内存展示树。见<u>sdk/samples/ideas/virtual-tree/</u>示例。</p> <h2>属性</h2> <ul><li>&lt;option&gt;的<code>expanded</code>属性 - &lt;option expanded&gt;将会为该元素默认设置<code>:expanded</code>状态。</li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li>SELECT_SELECTION_CHANGED 事件, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li>SELECT_SELECTION_CHANGING 事件, 当选择项将要改变时生成该事件。该事件为同步事件。</li> <li>ELEMENT_EXPANDED 事件, 当节点option展开时会向该option发生该事件。</li> <li>ELEMENT_COLLAPSED 事件, 当节点option折叠时会向该option发生该事件。</li></ul> <h2>方法</h2> <p>N/A - 该行为没有引入任何特有的方法。</p> <h2>value</h2> <p>any, 读/写属性。被选择项(option)的值。选择项(option)的值(value)。option的值是它的value属性或它的文本内容(如果未定义value属性时)。</p> <h2>在脚本中树事件的处理</h2> <h3><code>onControlEvent</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onControlEvent = function(evt)
+{
+  switch(evt.type) {
+    case Event.SELECT_SELECTION_CHANGED: /* 当前option被改变 */ break;
+    case Event.ELEMENT_EXPANDED: /* evt.target 为展开的元素 */ break;
+    case Event.ELEMENT_COLLAPSED: /* evt.target 为折叠的元素 */ break;<br>  }
+}
+</code></pre> <h3><code>on()</code>订阅</h3> <pre><code>var sel = $(select#some);
+sel.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+sel.on(&quot;expand&quot;, &quot;option&quot;, function() { ... 事件处理代码 ... });
+sel.on(&quot;collapse&quot;, &quot;option&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis 装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@when Event.ELEMENT_EXPANDED @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+@when Event.ELEMENT_COLLAPSED @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre> <h2 id="复选框树-tree-checkmarks"><a href="#复选框树-tree-checkmarks" class="header-anchor">#</a> 复选框树(tree-checkmarks)</h2> <h1>behavior:tree-checkmarks</h1> <p>有复选状态的树状结构的&lt;select&gt;列表行为。该行为可以被应用到任何块级容器元素上。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select|tree multiple=checkmarks&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p>该行为识别两种类型的&lt;option&gt;:</p> <ul><li>&quot;叶(Leaf)&quot; &lt;option&gt; 指不包含子&lt;option&gt;的元素。</li> <li>&quot;节点(Node)&quot; &lt;option&gt; 指包含子&lt;option&gt;的元素。</li></ul> <pre><code>&lt;option&gt;
+    &lt;caption&gt;Node标题&lt;/caption&gt;
+    &lt;option&gt;Leaf 1&lt;/option&gt;
+    &lt;option&gt;Leaf 2&lt;/option&gt;
+&lt;/option&gt;
+</code></pre> <p>被选择项会被设置<code>:current</code>状态标志。</p> <p>节点&lt;option&gt;在运行期会被设置<code>:node</code>标志(在CSS中可以使用:node伪类)。因此下面的CSS选择器:</p> <ul><li><code>option:node</code> - 匹配所有节点option;</li> <li><code>option:not(:node)</code> - 匹配所有的叶option.</li></ul> <p>每个叶元素可以被标记<code>:checked</code>状态，而每个节点元素可以有以下状态值:</p> <ul><li><code>option:node:incomplete</code> - 指该节点的子元素中混合了<code>:checked</code>和<code>:not(:checked)</code>状态的叶元素。</li> <li><code>option:node:checked</code> - 该节点仅包含<code>:checked</code>状态的叶元素。</li> <li><code>option:node:not(:checked)</code> - 该节点仅包含<code>:not(:checked</code>)状态的叶元素。</li></ul> <p><code>option:node</code>在响应UI事件(鼠标和键盘事件)时可能包含<code>:expanded</code>或<code>:collapsed</code>运行时状态标志。</p> <p>该行为支持&quot;虚拟树&quot;模式。初始时，该树的所有节点option可能都是折叠的，并且是空的。这些节点option只有当接收到ELEMENT_EXPANDED事件时才填充。并且在ELEMENT_COLLAPSED事件中清除以便用最小的内存展示树。见<u>sdk/samples/ideas/virtual-tree/</u>示例。</p> <h2>属性</h2> <ul><li>&lt;option&gt;的<code>expanded</code>属性 - &lt;option expanded&gt;将会为该元素默认设置<code>:expanded</code>状态。</li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li>SELECT_SELECTION_CHANGED 事件, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li>SELECT_SELECTION_CHANGING 事件, 当选择项将要改变时生成该事件。该事件为同步事件。</li> <li>SELECT_STATE_CHANGED 事件, 一些option的:checked状态被用户改变时生成该事件。</li> <li>ELEMENT_EXPANDED 事件, 当节点option展开时会向该option发生该事件。</li> <li>ELEMENT_COLLAPSED 事件, 当节点option折叠时会向该option发生该事件。</li></ul> <h2>方法</h2> <p>N/A - 该行为没有引入任何特有的方法。</p> <h2>value</h2> <p>any, 读/写属性。被选择项(option)的值。选择项(option)的值(value)。option的值是它的value属性或它的文本内容(如果未定义value属性时)。</p> <h2>在脚本中树事件的处理</h2> <h3><code>onControlEvent</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onControlEvent = function(evt)
+{
+  switch(evt.type) {
+    case Event.SELECT_SELECTION_CHANGED: /* 当前option被改变 */ break;
+    case Event.ELEMENT_EXPANDED: /* evt.target 为展开的元素 */ break;
+    case Event.ELEMENT_COLLAPSED: /* evt.target 为折叠的元素 */ break;<br>  }
+}
+</code></pre> <h3><code>on()</code>订阅</h3> <pre><code>var sel = $(select#some);
+sel.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+sel.on(&quot;expand&quot;, &quot;option&quot;, function() { ... 事件处理代码 ... });
+sel.on(&quot;collapse&quot;, &quot;option&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis 装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@when Event.ELEMENT_EXPANDED @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+@when Event.ELEMENT_COLLAPSED @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre> <h2 id="下拉选择列表-dropdown-select"><a href="#下拉选择列表-dropdown-select" class="header-anchor">#</a> 下拉选择列表(dropdown-select)</h2> <h1>behavior:dropdown-select</h1> <p>标准的下拉选择列表&lt;select&gt;行为。</p> <h2>元素</h2> <p>默认情况下，应用了该行为的元素有:</p> <ul><li><code>&lt;select size=&quot;1&quot;&gt;&lt;/select&gt;</code></li> <li><code>&lt;select|dropdown&gt;&lt;/select&gt;</code></li></ul> <h2>示例</h2> <div><!----></div> <h2>模型</h2> <p>该行为会将下面的select代码:</p> <pre><code>&lt;select&gt;
+  &lt;option value=&quot;#ff0000&quot; selected&gt;Red&lt;/option&gt;
+  &lt;option value=&quot;#00ff00&quot;&gt;Green&lt;/option&gt;
+  &lt;option value=&quot;#0000ff&quot;&gt;Blue&lt;/option&gt;
+&lt;/select&gt;
+</code></pre> <p>转换成</p> <pre><code>&lt;select&gt;
+  &lt;caption&gt;Red&lt;/caption&gt;
+  &lt;button /&gt;
+  &lt;popup&gt;
+    &lt;option value=&quot;#ff0000&quot; selected&gt;Red&lt;/option&gt;
+    &lt;option value=&quot;#00ff00&quot;&gt;Green&lt;/option&gt;
+    &lt;option value=&quot;#0000ff&quot;&gt;Blue&lt;/option&gt;
+  &lt;/popup&gt;
+&lt;/select&gt;
+</code></pre> <p>这些部分的元素默认使用master.css中的样式，不过你可以在宿主文档里使用CSS重定义它们的样式。</p> <h2>属性</h2> <p>该行为需要知道的属性:</p> <ul><li><code>size=integer</code> - 列表中可见元素的数量。注意：select元素的高度可以被CSS覆盖掉。</li> <li><code>name=&quot;name&quot;</code> - 标准的<em>name</em>属性 - from表单上一个input元素的名称。</li> <li><code>novalue=&quot;text&quot;</code> - 如果select中没有使用<code>&lt;option selected&gt;</code>初始化它，则将会使用该显示该文本。novalue属性使select可为空(<strong>nullable</strong>)，即如果没有选项被选择，则该select的value值为<em>undefined</em>。</li> <li><code>editable</code> - 该属性会将<code>behavior:edit</code>行为应用到<code>&lt;caption&gt;</code>元素上，使它可编辑。</li> <li><code>as=&quot;type&quot;</code> - 定义<code>&lt;option value=&quot;...&quot;&gt;</code>的解析规则，接收:
+      <ul><li><code>as=&quot;auto&quot;</code>, 默认值, 尝试翻译option的 value值为integer、float、boolean或length值。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;integer&quot;</code>, 尝试翻译option的value值为integer。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;float&quot;</code>, 尝试翻译option的value值为float。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;numeric&quot;</code>, 尝试翻译option的value值为integer或float。如果解析失败，则将value作为字符串。</li> <li><code>as=&quot;string&quot;</code>, 不解析option的value。将value作为字符串返回。</li></ul></li></ul> <h2>事件</h2> <p>除了标准事件集(鼠标、按键、聚焦)外，该行为还生成:</p> <ul><li>SELECT_SELECTION_CHANGED 事件, 当修改select中的选择项(在一个option上点击)时产生该事件。该事件为异步事件。</li> <li>SELECT_SELECTION_CHANGING 事件, 当选择项将要改变时生成该事件。该事件为同步事件。</li></ul> <h2>命令</h2> <p>注意: 命令时通过调用<code>element.execCommand(&quot;cmd-name&quot;[,params])</code>方法执行的。</p> <ul><li><b>&quot;set-current&quot;</b> - 当该命令发送给一个select内部的<code>&lt;option&gt;</code>元素时，该option将被设置为当前元素;</li></ul> <h2>方法</h2> <dl><dt>showPopup()</dt> <dd>- 显示列表弹窗。</dd></dl> <h2>value</h2> <ul><li>editable select - string, 读/写 - &lt;caption&gt;的内容</li> <li>nullable select - any | undefined, 读/写 - 被选择项的value值。option的值是它的value属性或它的文本内容(如果未定义value属性时)。在用户做任何选择之前，该select的值为<em>undefined</em>。</li> <li>normal select - any, 读/写 - 被选择项的value值。 ption的值是它的value属性或它的文本内容(如果未定义value属性时)。<br>
+	  如果没有&lt;option selected&gt;项，则select的值为它的第一个&lt;option&gt;元素的值。</li></ul> <h2>在脚本中选择项修改的处理</h2> <h3><code>onValueChanged</code>事件</h3> <pre><code>var btn = $(select#some);
+btn.onValueChanged = function() { var v = this.value; ... }
+</code></pre> <h3><code>on()</code> 订阅</h3> <pre><code>var btn = $(select#some);
+btn.on(&quot;change&quot;, function() { ... 事件处理代码 ... });
+self.on(&quot;change&quot;, &quot;select#some&quot;, function() { ... 事件处理代码 ... });
+</code></pre> <h3>decorators.tis 装饰器</h3> <pre><code>include &quot;decorators.tis&quot;;
+@change @on &quot;select#some&quot; :: ... 事件处理代码 ...;
+</code></pre></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sciterDocs/js/editorClass.html" class="prev">
+        编辑器类
+      </a></span> <span class="next"><a href="/sciterDocs/js/dateInput.html">
+        日期/时间输入
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/sciterDocs/assets/js/app.44b9e7e1.js" defer></script><script src="/sciterDocs/assets/js/2.e6e0d827.js" defer></script><script src="/sciterDocs/assets/js/4.631eb29c.js" defer></script>
+  </body>
+</html>

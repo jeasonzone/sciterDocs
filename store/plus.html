@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>plus库 | Sciter优化文档</title>
+    <meta name="description" content="基于原sciter文档的优化">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/sciterDocs/logo.ico">
+    
+    <link rel="preload" href="/sciterDocs/assets/css/0.styles.9c608cc4.css" as="style"><link rel="preload" href="/sciterDocs/assets/js/app.44b9e7e1.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/2.e6e0d827.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/115.6f22c6d3.js" as="script"><link rel="prefetch" href="/sciterDocs/assets/js/10.de274bb9.js"><link rel="prefetch" href="/sciterDocs/assets/js/100.2f3c6b94.js"><link rel="prefetch" href="/sciterDocs/assets/js/101.41b0ba8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/102.243d107b.js"><link rel="prefetch" href="/sciterDocs/assets/js/103.49baab6b.js"><link rel="prefetch" href="/sciterDocs/assets/js/104.f525157d.js"><link rel="prefetch" href="/sciterDocs/assets/js/105.6e23eef2.js"><link rel="prefetch" href="/sciterDocs/assets/js/106.e7a41717.js"><link rel="prefetch" href="/sciterDocs/assets/js/107.ded304e9.js"><link rel="prefetch" href="/sciterDocs/assets/js/108.da4df5cd.js"><link rel="prefetch" href="/sciterDocs/assets/js/109.8d716f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/11.b176fa87.js"><link rel="prefetch" href="/sciterDocs/assets/js/110.0c66913d.js"><link rel="prefetch" href="/sciterDocs/assets/js/111.85775d2b.js"><link rel="prefetch" href="/sciterDocs/assets/js/112.86ad6c98.js"><link rel="prefetch" href="/sciterDocs/assets/js/113.ef5a7e0b.js"><link rel="prefetch" href="/sciterDocs/assets/js/114.ed201f9e.js"><link rel="prefetch" href="/sciterDocs/assets/js/116.19777361.js"><link rel="prefetch" href="/sciterDocs/assets/js/117.5dec80f9.js"><link rel="prefetch" href="/sciterDocs/assets/js/118.3d91092b.js"><link rel="prefetch" href="/sciterDocs/assets/js/119.8b28986b.js"><link rel="prefetch" href="/sciterDocs/assets/js/12.503eaeb4.js"><link rel="prefetch" href="/sciterDocs/assets/js/120.5f8497bf.js"><link rel="prefetch" href="/sciterDocs/assets/js/121.081e0591.js"><link rel="prefetch" href="/sciterDocs/assets/js/122.ba05cc94.js"><link rel="prefetch" href="/sciterDocs/assets/js/123.1169a941.js"><link rel="prefetch" href="/sciterDocs/assets/js/124.ab926d4d.js"><link rel="prefetch" href="/sciterDocs/assets/js/125.dc68c79e.js"><link rel="prefetch" href="/sciterDocs/assets/js/126.2f42e738.js"><link rel="prefetch" href="/sciterDocs/assets/js/127.4f42f823.js"><link rel="prefetch" href="/sciterDocs/assets/js/128.1253ada8.js"><link rel="prefetch" href="/sciterDocs/assets/js/129.827a1485.js"><link rel="prefetch" href="/sciterDocs/assets/js/13.22672f29.js"><link rel="prefetch" href="/sciterDocs/assets/js/130.0643ef19.js"><link rel="prefetch" href="/sciterDocs/assets/js/131.928aa3f4.js"><link rel="prefetch" href="/sciterDocs/assets/js/14.f582a4e0.js"><link rel="prefetch" href="/sciterDocs/assets/js/15.e2a2d410.js"><link rel="prefetch" href="/sciterDocs/assets/js/16.e682ff53.js"><link rel="prefetch" href="/sciterDocs/assets/js/17.e3c02dea.js"><link rel="prefetch" href="/sciterDocs/assets/js/18.f08586b1.js"><link rel="prefetch" href="/sciterDocs/assets/js/19.d8d22397.js"><link rel="prefetch" href="/sciterDocs/assets/js/20.3d75a728.js"><link rel="prefetch" href="/sciterDocs/assets/js/21.c6805a64.js"><link rel="prefetch" href="/sciterDocs/assets/js/22.8da894a0.js"><link rel="prefetch" href="/sciterDocs/assets/js/23.9bb38182.js"><link rel="prefetch" href="/sciterDocs/assets/js/24.52dce2a6.js"><link rel="prefetch" href="/sciterDocs/assets/js/25.5648f011.js"><link rel="prefetch" href="/sciterDocs/assets/js/26.89dc463f.js"><link rel="prefetch" href="/sciterDocs/assets/js/27.c09e2a2e.js"><link rel="prefetch" href="/sciterDocs/assets/js/28.8c745e4a.js"><link rel="prefetch" href="/sciterDocs/assets/js/29.ccd0682f.js"><link rel="prefetch" href="/sciterDocs/assets/js/3.44806f7c.js"><link rel="prefetch" href="/sciterDocs/assets/js/30.4aa2fcd2.js"><link rel="prefetch" href="/sciterDocs/assets/js/31.703db421.js"><link rel="prefetch" href="/sciterDocs/assets/js/32.cbc96892.js"><link rel="prefetch" href="/sciterDocs/assets/js/33.ead695a9.js"><link rel="prefetch" href="/sciterDocs/assets/js/34.210bbf82.js"><link rel="prefetch" href="/sciterDocs/assets/js/35.cc6bd4ef.js"><link rel="prefetch" href="/sciterDocs/assets/js/36.af0741d8.js"><link rel="prefetch" href="/sciterDocs/assets/js/37.22c09dfa.js"><link rel="prefetch" href="/sciterDocs/assets/js/38.c79cf3b8.js"><link rel="prefetch" href="/sciterDocs/assets/js/39.030710d7.js"><link rel="prefetch" href="/sciterDocs/assets/js/4.631eb29c.js"><link rel="prefetch" href="/sciterDocs/assets/js/40.fd27cbe7.js"><link rel="prefetch" href="/sciterDocs/assets/js/41.62766825.js"><link rel="prefetch" href="/sciterDocs/assets/js/42.a5c26f07.js"><link rel="prefetch" href="/sciterDocs/assets/js/43.b3ceb583.js"><link rel="prefetch" href="/sciterDocs/assets/js/44.60c48a25.js"><link rel="prefetch" href="/sciterDocs/assets/js/45.98a0fd6a.js"><link rel="prefetch" href="/sciterDocs/assets/js/46.7be35d20.js"><link rel="prefetch" href="/sciterDocs/assets/js/47.d52adf80.js"><link rel="prefetch" href="/sciterDocs/assets/js/48.79222ca2.js"><link rel="prefetch" href="/sciterDocs/assets/js/49.500cadc8.js"><link rel="prefetch" href="/sciterDocs/assets/js/5.c9ecec7a.js"><link rel="prefetch" href="/sciterDocs/assets/js/50.214440b3.js"><link rel="prefetch" href="/sciterDocs/assets/js/51.a8f2fbff.js"><link rel="prefetch" href="/sciterDocs/assets/js/52.da9c9fd9.js"><link rel="prefetch" href="/sciterDocs/assets/js/53.7c02a5ad.js"><link rel="prefetch" href="/sciterDocs/assets/js/54.a35f6407.js"><link rel="prefetch" href="/sciterDocs/assets/js/55.cb3dd4ca.js"><link rel="prefetch" href="/sciterDocs/assets/js/56.d426b1a4.js"><link rel="prefetch" href="/sciterDocs/assets/js/57.a374b7b0.js"><link rel="prefetch" href="/sciterDocs/assets/js/58.e306c12c.js"><link rel="prefetch" href="/sciterDocs/assets/js/59.582b60c1.js"><link rel="prefetch" href="/sciterDocs/assets/js/6.7c7ef19b.js"><link rel="prefetch" href="/sciterDocs/assets/js/60.2896c82c.js"><link rel="prefetch" href="/sciterDocs/assets/js/61.d7df0142.js"><link rel="prefetch" href="/sciterDocs/assets/js/62.48604ffc.js"><link rel="prefetch" href="/sciterDocs/assets/js/63.a75a2f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/64.0baf1184.js"><link rel="prefetch" href="/sciterDocs/assets/js/65.62da2a15.js"><link rel="prefetch" href="/sciterDocs/assets/js/66.a8b889dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/67.3b37540d.js"><link rel="prefetch" href="/sciterDocs/assets/js/68.91634493.js"><link rel="prefetch" href="/sciterDocs/assets/js/69.1ee19c1a.js"><link rel="prefetch" href="/sciterDocs/assets/js/7.fcddb250.js"><link rel="prefetch" href="/sciterDocs/assets/js/70.a003ab9f.js"><link rel="prefetch" href="/sciterDocs/assets/js/71.9ba10509.js"><link rel="prefetch" href="/sciterDocs/assets/js/72.0de81999.js"><link rel="prefetch" href="/sciterDocs/assets/js/73.3e751fb5.js"><link rel="prefetch" href="/sciterDocs/assets/js/74.932aa838.js"><link rel="prefetch" href="/sciterDocs/assets/js/75.ae054aa6.js"><link rel="prefetch" href="/sciterDocs/assets/js/76.018d3720.js"><link rel="prefetch" href="/sciterDocs/assets/js/77.6c99c1bb.js"><link rel="prefetch" href="/sciterDocs/assets/js/78.c495647c.js"><link rel="prefetch" href="/sciterDocs/assets/js/79.a10c82f1.js"><link rel="prefetch" href="/sciterDocs/assets/js/8.c5a1f576.js"><link rel="prefetch" href="/sciterDocs/assets/js/80.a47845c4.js"><link rel="prefetch" href="/sciterDocs/assets/js/81.26a22511.js"><link rel="prefetch" href="/sciterDocs/assets/js/82.c7dd5277.js"><link rel="prefetch" href="/sciterDocs/assets/js/83.066c2476.js"><link rel="prefetch" href="/sciterDocs/assets/js/84.825a2068.js"><link rel="prefetch" href="/sciterDocs/assets/js/85.089dc4a1.js"><link rel="prefetch" href="/sciterDocs/assets/js/86.b15448a5.js"><link rel="prefetch" href="/sciterDocs/assets/js/87.67c6395f.js"><link rel="prefetch" href="/sciterDocs/assets/js/88.d9132d8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/89.70cacf9b.js"><link rel="prefetch" href="/sciterDocs/assets/js/9.7c0713dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/90.4b4def09.js"><link rel="prefetch" href="/sciterDocs/assets/js/91.bc6db15e.js"><link rel="prefetch" href="/sciterDocs/assets/js/92.57897042.js"><link rel="prefetch" href="/sciterDocs/assets/js/93.3144c87a.js"><link rel="prefetch" href="/sciterDocs/assets/js/94.e0471db7.js"><link rel="prefetch" href="/sciterDocs/assets/js/95.dcb7dac6.js"><link rel="prefetch" href="/sciterDocs/assets/js/96.9cf440f6.js"><link rel="prefetch" href="/sciterDocs/assets/js/97.946663d4.js"><link rel="prefetch" href="/sciterDocs/assets/js/98.e3573176.js"><link rel="prefetch" href="/sciterDocs/assets/js/99.ec657a18.js">
+    <link rel="stylesheet" href="/sciterDocs/assets/css/0.styles.9c608cc4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/sciterDocs/" class="home-link router-link-active"><!----> <span class="site-name">Sciter优化文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/sciterDocs/store/Formation.html" class="sidebar-link">Formation库</a></li><li><a href="/sciterDocs/store/Lang.html" class="sidebar-link">Lang库</a></li><li><a href="/sciterDocs/store/plus.html" class="active sidebar-link">plus库</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sciterDocs/store/plus.html#plus框架" class="sidebar-link">Plus框架</a></li></ul></li><li><a href="/sciterDocs/store/q_doc.html" class="sidebar-link">q(JQuery)库</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="plus库"><a href="#plus库" class="header-anchor">#</a> plus库</h1> <h2 id="plus框架"><a href="#plus框架" class="header-anchor">#</a> Plus框架</h2> <p>Plus框架的主要目的是提供一种数据绑定工具 —— 数据(模型)可以使用多种方式绑定到对应的HTML元素的展示上。</p> <h2>模型声明——<em>model</em>属性</h2> <p>任何内部有展示数据(又名模型)的DOM容器元素都可以链接到某个名称空间(对象)上。这种管理使用model属性来指定: </p> <pre><code>&lt;body model=&quot;MyDataNamespace&quot;&gt;
+   ... 
+&lt;/body&gt; 
+</code></pre> <p>这时，在你的脚本中应该下面的代码: </p> <pre><code>namespace MyDataNamespace {
+   ...
+}
+</code></pre> <p>这种情况下，则body元素的内容将会链接(绑定)到MyDataNamespace名称空间中的数据上。</p> <p>有model属性的最顶层的元素被当做<em>数据模型视图</em> - 反应模型数据名称空间/对象的状态。</p> <h2>元素绑定(Bound)</h2> <p>元素的value值可以被绑定到模型的某些变量上。+plus框架使用<em>name</em>属性值进行绑定，其中<em>name</em>属性值可以是绑定的变量名或一个表达式。</p> <pre><code>&lt;body model=&quot;Data&quot;&gt; 
+  &lt;p&gt;Whom to greet: &lt;input|text(greeting) /&gt;&lt;/p&gt;
+  &lt;p&gt;Greeting: Hello &lt;output(greeting) /&gt;!&lt;/p&gt;
+&lt;/body&gt;
+</code></pre> <p>上面的两个元素都绑定了模型中的同一个<code>Data.greeting</code>变量。修改&lt;input&gt;元素的值将会自动反应到&lt;output&gt;元素上。</p> <p>普通的数据变量直接绑定到关联元素的<code>value</code>属性上。但是如果元素(或它的行为类上)定义了<code>setBoundValue(newVal)</code>元素，则将调用该函数来设置绑定的数据。</p> <h2>属性绑定(Bound)</h2> <p>Sciter也支持将元素的属性值绑定到变量或对象属性上。要定义绑定属性，仅需在需要绑定的属性名前加上'@'字符，然后在属性值中写入绑定的变量名或一个表达式: </p> <pre><code>&lt;li&gt;&lt;picture @src=&quot;customer.image&quot; /&gt; &lt;output(customer.name)/&gt;&lt;/li&gt;
+</code></pre> <p>上面的picture元素的<code>src</code>属性将绑定<code>customer.image</code>变量，并且output元素也绑定了<code>customer.name</code>变量。</p> <p>下面这几个绑定属性将映射到state状态上:</p> <ul><li><code>@enabled=&quot;表达式&quot;</code> - bool类型的表达式，绑定到element.state.disabled = !表达式;</li> <li><code>@disabled=&quot;表达式&quot;</code> - bool类型的表达式，绑定到element.state.disabled = 表达式;</li> <li><code>@readonly=&quot;表达式&quot;</code> - bool类型的表达式，绑定到element.state.readonly = 表达式;</li> <li><code>@expanded=&quot;表达式&quot;</code> - bool类型的表达式，绑定到element.state.expanded = 表达式;</li> <li><code>@collapsed=&quot;表达式&quot;</code> - bool类型的表达式，绑定到element.state.collapsed = 表达式;</li></ul> <h2>可重复项(Repeatable)</h2> <p>任何容器元素可以有个each=&quot;<em>item</em> in <em>items</em>&quot;属性定义。这时容器内的元素将被当做模板代码，容器的内容的初始化将会遍历items集合，items中每一项都会根据模板克隆并填充数据。 <em>each</em>属性的格式如下:</p> <pre><code>[{index},]{item} <strong>in</strong> {items-表达式} [ <strong>|</strong> {filter-表达式}
+</code></pre> <p>其中:</p> <ul><li><code>{item}</code> - 任意名称，它代表repeatable节中当前项的变量名称;</li> <li><code>{index}</code> - 可选, 当前项在items数组中的索引;</li> <li><code>{items-表达式}</code> - 模型中的一个变量，或者是一个返回对象列表/数组的表达式</li> <li><code>{filter-表达式}</code> - 可选, 应用到对象列表/数组上的过滤器。它可以是:</li> <ul><li><code>null</code> (或省略) - 未设置过滤器, 所有元素都将被渲染;</li> <li><code>object</code> (包括对象object字面值) - 仅渲染与这个对象的所有属性名和值均匹配的元素;</li> <li><code>function(item, index)</code> - 为每个变量项将被调用的函数, 如果它返回<em>true</em>，则该项可以被渲染;</li> <li><code>&quot;string&quot;</code> - 如果每个变量项中的任何字符串属性包含这个字符串，则该项可以被渲染。</li></ul></ul> <p>示例：将myCustomers数组中的每一项作为ol的列表项进行渲染:</p> <pre><code>  &lt;ol each=&quot;customer in myCustomers&quot;&gt;
+      &lt;li&gt;&lt;picture @src=&quot;customer.image&quot; /&gt; &lt;output(customer.name)/&gt;&lt;/li&gt;
+  &lt;/ol&gt;
+</code></pre> <h2>在数据路径上观察变化</h2> <p>Plus定义了<code>@observing</code>装饰器换上，它可以用于在模型数据树上订阅事件函数。订阅的语法如下:</p> <pre><code>@observing &quot;path&quot; [&quot;path2&quot;[, ... &quot;pathN&quot; ]] 
+  function(path) {
+  }</code></pre> <p>其中，<i>path</i>是一个以<code>.</code>(点)和<code>[]</code>(如果元素路径是一个数组时)分隔的字符串。</p> <p>这个函数被调用时，<i>this</i>被设置为路径最右端的对象或数组。</p> <p>示例:</p> <pre><code>namespace Data 
+{ 
+   var items = [
+       { name:&quot;Alan&quot;, state: true },
+       { name:&quot;Winston&quot;, state: false }
+   ];
+   @oberving &quot;items[].state&quot; function() {
+      // items中某项的.state属性被改变
+      // 'this'这里是item
+   }
+}</code></pre> <h2>基本的事件绑定属性</h2> <p>元素可以包含一些事件属性，它们可以定义一个当对应事件发生时执行的函数。这个处理器函数被调用时，<code>this</code>变量被设置为对应的DOM元素。而第一个参数被设置为该DOM元素绑定的模型对象。</p> <p>事件属性列表: &quot;click&quot;, &quot;dblclick&quot;, &quot;change&quot;, &quot;enter&quot;, &quot;escape&quot;, &quot;focusin&quot;, &quot;focusout&quot;.</p> <p>示例:</p> <pre><code>  &lt;b click=&quot;items.removeByValue(item)&quot;&gt;x&lt;/b&gt;
+</code></pre> <p>点击上面的<code>&lt;b&gt;</code>元素将会调用<code>items.removeByValue()</code>函数，并且将当前item对象作为它的第一参数。</p> <h2>子-模型</h2> <p>主数据模型视图元素内部的元素也可以定义<em>model</em>属性 - 它们被称作子视图，看起来像数据树的一部分。</p> <pre><code>namespace MyDataNamespace
+{
+  var records = [ {name: &quot;first&quot;, ...},<br>                  {name: &quot;second&quot;, ...},
+                  {name: &quot;third&quot;, ...} ];
+  var <u>currentRecord</u> = {}; // 用于子模型;
+  // 设置当前记录的函数
+  function setCurrentRecord(index) { currentRecord = records[index]; }
+}
+</code></pre> <p>通过子模型，我们可以在视图树，这些视图元素在当前模型(名称空间/对象)中查找绑定元素:</p> <pre><code>&lt;body model=&quot;MyDataNamespace&quot;&gt;
+   &lt;!-- records list --&gt;
+   &lt;ol each=&quot;index,record in records&quot;&gt;
+      &lt;li&gt;&lt;output(record.name) click=&quot;setCurrentRecord(index)&quot; /&gt;&lt;/li&gt;
+   &lt;/ol&gt;
+   &lt;!-- current record view --&gt;
+   &lt;section #record-details-view <u>model=&quot;currentRecord&quot;</u>&gt;
+      &lt;input(name) /&gt;
+      ...
+   &lt;/section&gt;
+&lt;/body&gt;
+</code></pre> <p>子视图元素观察[子]模型中的变量的修改, 因此当变量被改变时，所以观察元素都将重新绑定新的数据。</p> <p>在上面的示例中，在列表中的<em>output(name)</em>元素上点击时，将会调用<code>setCurrentRecord()</code>函数，从而触发currentRecord被设置为一个新对象。参见demos/L-list-detail.htm示例。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sciterDocs/store/Lang.html" class="prev">
+        Lang库
+      </a></span> <span class="next"><a href="/sciterDocs/store/q_doc.html">
+        q(JQuery)库
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/sciterDocs/assets/js/app.44b9e7e1.js" defer></script><script src="/sciterDocs/assets/js/2.e6e0d827.js" defer></script><script src="/sciterDocs/assets/js/115.6f22c6d3.js" defer></script>
+  </body>
+</html>

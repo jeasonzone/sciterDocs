@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>本地化(i18n)处理 | Sciter优化文档</title>
+    <meta name="description" content="基于原sciter文档的优化">
+    <meta name="generator" content="VuePress 1.3.1">
+    <link rel="icon" href="/sciterDocs/logo.ico">
+    
+    <link rel="preload" href="/sciterDocs/assets/css/0.styles.9c608cc4.css" as="style"><link rel="preload" href="/sciterDocs/assets/js/app.44b9e7e1.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/2.e6e0d827.js" as="script"><link rel="preload" href="/sciterDocs/assets/js/61.d7df0142.js" as="script"><link rel="prefetch" href="/sciterDocs/assets/js/10.de274bb9.js"><link rel="prefetch" href="/sciterDocs/assets/js/100.2f3c6b94.js"><link rel="prefetch" href="/sciterDocs/assets/js/101.41b0ba8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/102.243d107b.js"><link rel="prefetch" href="/sciterDocs/assets/js/103.49baab6b.js"><link rel="prefetch" href="/sciterDocs/assets/js/104.f525157d.js"><link rel="prefetch" href="/sciterDocs/assets/js/105.6e23eef2.js"><link rel="prefetch" href="/sciterDocs/assets/js/106.e7a41717.js"><link rel="prefetch" href="/sciterDocs/assets/js/107.ded304e9.js"><link rel="prefetch" href="/sciterDocs/assets/js/108.da4df5cd.js"><link rel="prefetch" href="/sciterDocs/assets/js/109.8d716f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/11.b176fa87.js"><link rel="prefetch" href="/sciterDocs/assets/js/110.0c66913d.js"><link rel="prefetch" href="/sciterDocs/assets/js/111.85775d2b.js"><link rel="prefetch" href="/sciterDocs/assets/js/112.86ad6c98.js"><link rel="prefetch" href="/sciterDocs/assets/js/113.ef5a7e0b.js"><link rel="prefetch" href="/sciterDocs/assets/js/114.ed201f9e.js"><link rel="prefetch" href="/sciterDocs/assets/js/115.6f22c6d3.js"><link rel="prefetch" href="/sciterDocs/assets/js/116.19777361.js"><link rel="prefetch" href="/sciterDocs/assets/js/117.5dec80f9.js"><link rel="prefetch" href="/sciterDocs/assets/js/118.3d91092b.js"><link rel="prefetch" href="/sciterDocs/assets/js/119.8b28986b.js"><link rel="prefetch" href="/sciterDocs/assets/js/12.503eaeb4.js"><link rel="prefetch" href="/sciterDocs/assets/js/120.5f8497bf.js"><link rel="prefetch" href="/sciterDocs/assets/js/121.081e0591.js"><link rel="prefetch" href="/sciterDocs/assets/js/122.ba05cc94.js"><link rel="prefetch" href="/sciterDocs/assets/js/123.1169a941.js"><link rel="prefetch" href="/sciterDocs/assets/js/124.ab926d4d.js"><link rel="prefetch" href="/sciterDocs/assets/js/125.dc68c79e.js"><link rel="prefetch" href="/sciterDocs/assets/js/126.2f42e738.js"><link rel="prefetch" href="/sciterDocs/assets/js/127.4f42f823.js"><link rel="prefetch" href="/sciterDocs/assets/js/128.1253ada8.js"><link rel="prefetch" href="/sciterDocs/assets/js/129.827a1485.js"><link rel="prefetch" href="/sciterDocs/assets/js/13.22672f29.js"><link rel="prefetch" href="/sciterDocs/assets/js/130.0643ef19.js"><link rel="prefetch" href="/sciterDocs/assets/js/131.928aa3f4.js"><link rel="prefetch" href="/sciterDocs/assets/js/14.f582a4e0.js"><link rel="prefetch" href="/sciterDocs/assets/js/15.e2a2d410.js"><link rel="prefetch" href="/sciterDocs/assets/js/16.e682ff53.js"><link rel="prefetch" href="/sciterDocs/assets/js/17.e3c02dea.js"><link rel="prefetch" href="/sciterDocs/assets/js/18.f08586b1.js"><link rel="prefetch" href="/sciterDocs/assets/js/19.d8d22397.js"><link rel="prefetch" href="/sciterDocs/assets/js/20.3d75a728.js"><link rel="prefetch" href="/sciterDocs/assets/js/21.c6805a64.js"><link rel="prefetch" href="/sciterDocs/assets/js/22.8da894a0.js"><link rel="prefetch" href="/sciterDocs/assets/js/23.9bb38182.js"><link rel="prefetch" href="/sciterDocs/assets/js/24.52dce2a6.js"><link rel="prefetch" href="/sciterDocs/assets/js/25.5648f011.js"><link rel="prefetch" href="/sciterDocs/assets/js/26.89dc463f.js"><link rel="prefetch" href="/sciterDocs/assets/js/27.c09e2a2e.js"><link rel="prefetch" href="/sciterDocs/assets/js/28.8c745e4a.js"><link rel="prefetch" href="/sciterDocs/assets/js/29.ccd0682f.js"><link rel="prefetch" href="/sciterDocs/assets/js/3.44806f7c.js"><link rel="prefetch" href="/sciterDocs/assets/js/30.4aa2fcd2.js"><link rel="prefetch" href="/sciterDocs/assets/js/31.703db421.js"><link rel="prefetch" href="/sciterDocs/assets/js/32.cbc96892.js"><link rel="prefetch" href="/sciterDocs/assets/js/33.ead695a9.js"><link rel="prefetch" href="/sciterDocs/assets/js/34.210bbf82.js"><link rel="prefetch" href="/sciterDocs/assets/js/35.cc6bd4ef.js"><link rel="prefetch" href="/sciterDocs/assets/js/36.af0741d8.js"><link rel="prefetch" href="/sciterDocs/assets/js/37.22c09dfa.js"><link rel="prefetch" href="/sciterDocs/assets/js/38.c79cf3b8.js"><link rel="prefetch" href="/sciterDocs/assets/js/39.030710d7.js"><link rel="prefetch" href="/sciterDocs/assets/js/4.631eb29c.js"><link rel="prefetch" href="/sciterDocs/assets/js/40.fd27cbe7.js"><link rel="prefetch" href="/sciterDocs/assets/js/41.62766825.js"><link rel="prefetch" href="/sciterDocs/assets/js/42.a5c26f07.js"><link rel="prefetch" href="/sciterDocs/assets/js/43.b3ceb583.js"><link rel="prefetch" href="/sciterDocs/assets/js/44.60c48a25.js"><link rel="prefetch" href="/sciterDocs/assets/js/45.98a0fd6a.js"><link rel="prefetch" href="/sciterDocs/assets/js/46.7be35d20.js"><link rel="prefetch" href="/sciterDocs/assets/js/47.d52adf80.js"><link rel="prefetch" href="/sciterDocs/assets/js/48.79222ca2.js"><link rel="prefetch" href="/sciterDocs/assets/js/49.500cadc8.js"><link rel="prefetch" href="/sciterDocs/assets/js/5.c9ecec7a.js"><link rel="prefetch" href="/sciterDocs/assets/js/50.214440b3.js"><link rel="prefetch" href="/sciterDocs/assets/js/51.a8f2fbff.js"><link rel="prefetch" href="/sciterDocs/assets/js/52.da9c9fd9.js"><link rel="prefetch" href="/sciterDocs/assets/js/53.7c02a5ad.js"><link rel="prefetch" href="/sciterDocs/assets/js/54.a35f6407.js"><link rel="prefetch" href="/sciterDocs/assets/js/55.cb3dd4ca.js"><link rel="prefetch" href="/sciterDocs/assets/js/56.d426b1a4.js"><link rel="prefetch" href="/sciterDocs/assets/js/57.a374b7b0.js"><link rel="prefetch" href="/sciterDocs/assets/js/58.e306c12c.js"><link rel="prefetch" href="/sciterDocs/assets/js/59.582b60c1.js"><link rel="prefetch" href="/sciterDocs/assets/js/6.7c7ef19b.js"><link rel="prefetch" href="/sciterDocs/assets/js/60.2896c82c.js"><link rel="prefetch" href="/sciterDocs/assets/js/62.48604ffc.js"><link rel="prefetch" href="/sciterDocs/assets/js/63.a75a2f80.js"><link rel="prefetch" href="/sciterDocs/assets/js/64.0baf1184.js"><link rel="prefetch" href="/sciterDocs/assets/js/65.62da2a15.js"><link rel="prefetch" href="/sciterDocs/assets/js/66.a8b889dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/67.3b37540d.js"><link rel="prefetch" href="/sciterDocs/assets/js/68.91634493.js"><link rel="prefetch" href="/sciterDocs/assets/js/69.1ee19c1a.js"><link rel="prefetch" href="/sciterDocs/assets/js/7.fcddb250.js"><link rel="prefetch" href="/sciterDocs/assets/js/70.a003ab9f.js"><link rel="prefetch" href="/sciterDocs/assets/js/71.9ba10509.js"><link rel="prefetch" href="/sciterDocs/assets/js/72.0de81999.js"><link rel="prefetch" href="/sciterDocs/assets/js/73.3e751fb5.js"><link rel="prefetch" href="/sciterDocs/assets/js/74.932aa838.js"><link rel="prefetch" href="/sciterDocs/assets/js/75.ae054aa6.js"><link rel="prefetch" href="/sciterDocs/assets/js/76.018d3720.js"><link rel="prefetch" href="/sciterDocs/assets/js/77.6c99c1bb.js"><link rel="prefetch" href="/sciterDocs/assets/js/78.c495647c.js"><link rel="prefetch" href="/sciterDocs/assets/js/79.a10c82f1.js"><link rel="prefetch" href="/sciterDocs/assets/js/8.c5a1f576.js"><link rel="prefetch" href="/sciterDocs/assets/js/80.a47845c4.js"><link rel="prefetch" href="/sciterDocs/assets/js/81.26a22511.js"><link rel="prefetch" href="/sciterDocs/assets/js/82.c7dd5277.js"><link rel="prefetch" href="/sciterDocs/assets/js/83.066c2476.js"><link rel="prefetch" href="/sciterDocs/assets/js/84.825a2068.js"><link rel="prefetch" href="/sciterDocs/assets/js/85.089dc4a1.js"><link rel="prefetch" href="/sciterDocs/assets/js/86.b15448a5.js"><link rel="prefetch" href="/sciterDocs/assets/js/87.67c6395f.js"><link rel="prefetch" href="/sciterDocs/assets/js/88.d9132d8b.js"><link rel="prefetch" href="/sciterDocs/assets/js/89.70cacf9b.js"><link rel="prefetch" href="/sciterDocs/assets/js/9.7c0713dd.js"><link rel="prefetch" href="/sciterDocs/assets/js/90.4b4def09.js"><link rel="prefetch" href="/sciterDocs/assets/js/91.bc6db15e.js"><link rel="prefetch" href="/sciterDocs/assets/js/92.57897042.js"><link rel="prefetch" href="/sciterDocs/assets/js/93.3144c87a.js"><link rel="prefetch" href="/sciterDocs/assets/js/94.e0471db7.js"><link rel="prefetch" href="/sciterDocs/assets/js/95.dcb7dac6.js"><link rel="prefetch" href="/sciterDocs/assets/js/96.9cf440f6.js"><link rel="prefetch" href="/sciterDocs/assets/js/97.946663d4.js"><link rel="prefetch" href="/sciterDocs/assets/js/98.e3573176.js"><link rel="prefetch" href="/sciterDocs/assets/js/99.ec657a18.js">
+    <link rel="stylesheet" href="/sciterDocs/assets/css/0.styles.9c608cc4.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/sciterDocs/" class="home-link router-link-active"><!----> <span class="site-name">Sciter优化文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="文档" class="dropdown-title"><span class="title">文档</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/sciterDocs/css/css_properties_map.html" class="nav-link">
+  CSS
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/Dom/Element.html" class="nav-link">
+  Dom类
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/tiscript/tiscript_article.html" class="nav-link">
+  脚本(TIScript)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/runtime/Global.html" class="nav-link">
+  脚本运行时
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js/buttonClass.html" class="nav-link">
+  行为
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/store/Formation.html" class="nav-link">
+  脚本库
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/js_csss/csss.html" class="nav-link">
+  脚本(CSSS!)
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/other/standalone_Sciter_executable.html" class="nav-link">
+  其他内容
+</a></li><li class="dropdown-item"><!----> <a href="/sciterDocs/localApi/window.html" class="nav-link">
+  本地API
+</a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><a href="/sciterDocs/other/standalone_Sciter_executable.html" class="sidebar-link">scapp.exe</a></li><li><a href="/sciterDocs/other/HTML_Window.html" class="sidebar-link">HTML窗口</a></li><li><a href="/sciterDocs/other/window_frame_extended.html" class="sidebar-link">窗口标题上的工具条</a></li><li><a href="/sciterDocs/other/IAccessible_and_UI_automation_testing.html" class="sidebar-link">IAccessible和UI自动测试</a></li><li><a href="/sciterDocs/other/Context_menus.html" class="sidebar-link">上下文菜单</a></li><li><a href="/sciterDocs/other/Drag_and_Drop.html" class="sidebar-link">拖拽操作</a></li><li><a href="/sciterDocs/other/specific_tags.html" class="sidebar-link">Sciter特有标签</a></li><li><a href="/sciterDocs/other/behavior_prototype_aspect.html" class="sidebar-link">behavior与prototype/aspect</a></li><li><a href="/sciterDocs/other/Better_CSS_sprites.html" class="sidebar-link">更好的CSS精灵</a></li><li><a href="/sciterDocs/other/Caret_positions_in_HTML.html" class="sidebar-link">HTML中的插入位置</a></li><li><a href="/sciterDocs/other/construction_mean_TIScript.html" class="sidebar-link">TIScript中::构造器</a></li><li><a href="/sciterDocs/other/DOM_Inspector_how_remove_border_from_input.html" class="sidebar-link">怎么移除输入框的边框</a></li><li><a href="/sciterDocs/other/frame_content_style.html" class="sidebar-link">frame的content-style属性</a></li><li><a href="/sciterDocs/other/new_TIScript_features.html" class="sidebar-link">TIScript的新特性</a></li><li><a href="/sciterDocs/other/Plus_for_Sciter.html" class="sidebar-link">Sciter的Plus框架</a></li><li><a href="/sciterDocs/other/plus_and_formation_what_the_difference.html" class="sidebar-link">+Plus与+Formation的区别</a></li><li><a href="/sciterDocs/other/Promises_A.html" class="sidebar-link">Promises A+</a></li><li><a href="/sciterDocs/other/Sciter_3.html" class="sidebar-link">Sciter 3 简介</a></li><li><a href="/sciterDocs/other/Sciter_UI_application_architecture.html" class="sidebar-link">Sciter的UI架构</a></li><li><a href="/sciterDocs/other/Sciter_UI_basic_principles.html" class="sidebar-link">Sciter的UI设计基本原则</a></li><li><a href="/sciterDocs/other/Sciter_on_multihead_system.html" class="sidebar-link">Sciter在多屏系统上</a></li><li><a href="/sciterDocs/other/Sciter_HTML_parsing_flavour.html" class="sidebar-link">Sciter中HTML特殊格式</a></li><li><a href="/sciterDocs/other/Sciter_video_support.html" class="sidebar-link">Sciter的video标签</a></li><li><a href="/sciterDocs/other/Theory_of_URL.html" class="sidebar-link">URL原理</a></li><li><a href="/sciterDocs/other/TIScript_syntax_compatible_with_CSS.html" class="sidebar-link">TIScript语法兼容CSS</a></li><li><a href="/sciterDocs/other/Use_of_CSS_constants_in_script.html" class="sidebar-link">在脚本中使用CSS常量</a></li><li><a href="/sciterDocs/other/visibility_none_article.html" class="sidebar-link">visibility的none值</a></li><li><a href="/sciterDocs/other/this_and_this_super_function_arguments.html" class="sidebar-link">this与this super</a></li><li><a href="/sciterDocs/other/pager_template_format.html" class="sidebar-link">打印预览模板页面格式</a></li><li><a href="/sciterDocs/other/task_await_feature.html" class="sidebar-link">TIScript中的task/await特性</a></li><li><a href="/sciterDocs/other/Sciter_and_DirectX.html" class="sidebar-link">Sciter与DirectX</a></li><li><a href="/sciterDocs/other/path_images_doc.html" class="sidebar-link">path图像</a></li><li><a href="/sciterDocs/other/Localization.html" class="active sidebar-link">本地化(i18n)处理</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/sciterDocs/other/Localization.html#本地化-i18n-处理" class="sidebar-link">本地化(i18n)处理</a></li></ul></li><li><a href="/sciterDocs/other/Reusable_components.html" class="sidebar-link">可重用组件化</a></li><li><a href="/sciterDocs/other/collapsed_and_expanded_state.html" class="sidebar-link">collapsed和expanded状态</a></li><li><a href="/sciterDocs/other/event_handler_assignment.html" class="sidebar-link">事件赋值方式</a></li><li><a href="/sciterDocs/other/sciter_for_AngularJS_practitioners.html" class="sidebar-link">AngularJS使用者的Sciter指南</a></li><li><a href="/sciterDocs/other/upcomming_changes_in_4_1.html" class="sidebar-link">即将来临的Sciter 4.1..的变化</a></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="本地化-i18n-处理"><a href="#本地化-i18n-处理" class="header-anchor">#</a> 本地化(i18n)处理</h2> <h2>1. 静态本地化：使用SGML实体</h2> <p>“静态”的意思是你提前知道你的UI语言，并且在运行期不会发生改变。</p> <p>假设你有下面这样的文档:</p> <pre><code>&lt;html&gt;
+  &lt;head&gt;
+    &lt;include src=&quot;lang:words.htm&quot;/&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;&amp;hello; &amp;world; !&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> <p>并且还有两个entity表文件, words-en.htm :</p> <pre><code>&lt;!ENTITY hello                &quot;Hello&quot;&gt;
+&lt;!ENTITY world                &quot;World&quot;&gt;</code></pre> <p>和 words-zh.htm :</p> <pre><code>&lt;!ENTITY hello                &quot;你好&quot;&gt;
+&lt;!ENTITY world                &quot;世界&quot;&gt;</code></pre> <p>那么当加载这个主HTML文档时，你将在SCN_LOAD_DATA中接收到“lang:words.htm”的URL请求(见上面的<code>&lt;include&gt;</code>中的声明)。<br> 
+  对于这个请求的响应，你可以根据你的应用程序的需要觉得是返回“words-en.htm”或“words-zh.htm”的内容。</p> <h2>2. 静态本地化：使用内嵌方式</h2> <p>假设你有下面这样的文档:</p> <pre><code>&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;
+     &lt;include src=&quot;lang:fragment:hello-world&quot;&gt;Hello World&lt;/include&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre> <p>它使用<code>&lt;include&gt;</code>来请求HTML片段。正常情况下在这里你将只会看到“Hello World”。不过当你的<br> 
+  应用程序一旦处理SCN_LOAD_DATA / “lang:fragment:hello-world” 请求, 则你的响应内容将会自动替换<code>&lt;include&gt;...&lt;/include&gt;</code>中的内容。</p> <h2>3. 动态本地化：使用CSS</h2> <p>“动态”的意思是可以动态加载UI的翻译内容 – 即运行期可切换语言。</p> <p>假设你有下面这样的文档:</p> <pre><code>&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      @import url(lang.css);
+    &lt;/style&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;
+     &lt;span class=&quot;hello-world&quot;&gt;Hello World&lt;/span&gt;
+  &lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> <p>以及下面这样的lang.css内容</p> <pre><code>span.hello-world:lang(en) { content:&quot;Hello World&quot;; }
+...
+span.hello-world:lang(zh) { content:&quot;你好，世界&quot;; }
+...</code></pre> <p>那么当你切换<code>&lt;html lang=...&gt;</code>中lang属性的值时(在加载时或运行期)，你将看到<code>span.hello-world</code>中的内容会自动切换不同的语言。</p> <h2>4. 动态本地化：使用脚本</h2> <p>dk/samples/+lang/目录中提供了一种脚本切换语言的脚本实现。 它使用了CSS aspect特性 – 为特定的DOM元素声明和绑定脚本代码。</p> <p>除了支持简单的文本翻译和替换，它还支持语言智能排版和多元化(pluralization)。 </p> <h2>5. 预处理方式</h2> <p>原则上，你也可以混合使用上面说的所有方法。</p> <p>同时, 在某些情况下，你也可以考虑使用某种本地代码或脚本的预处理器。</p> <p>比如，像下面这样的文档:</p> <pre><code>&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;%HELLO% %WORLD% !&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> <p>这是一张很简单的预处理方式：通过本地代码在将内容提交给Sciter引擎之前，查找所有类似<code>%HELLO%</code>这样的字符串，并替换它。</p> <p>在脚本中，你可以使用内置的预处理特性，比如像下面这样的代码:</p> <pre><code>&lt;html&gt;
+&lt;body&gt;
+  &lt;p&gt;&lt;% =words.hello %&gt; &lt;% =words.world %&gt; !&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre> <p>预处理方式有一个共同的问题: 当需要替换html内容时，你需要替换整个html内容。而如果你使用实体(上面讲的第一种方式)时，你只需要下面这样的代码即可:</p> <pre><code>el.html = &quot;&amp;hello; &amp;world&quot;;
+</code></pre> <h2>总之</h2> <p>使用哪种方式取决于你的选择。第一种和第二种方式是最有效的，通常它们可以一起使用。<br> 
+  因为动态填充和切换语言这种场景并不是很普遍，即使遇到这种情况也可以通过特定的函数来处理。</p></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/sciterDocs/other/path_images_doc.html" class="prev">
+        path图像
+      </a></span> <span class="next"><a href="/sciterDocs/other/Reusable_components.html">
+        可重用组件化
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/sciterDocs/assets/js/app.44b9e7e1.js" defer></script><script src="/sciterDocs/assets/js/2.e6e0d827.js" defer></script><script src="/sciterDocs/assets/js/61.d7df0142.js" defer></script>
+  </body>
+</html>
